@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AViewController.h"
 @interface ViewController ()
 
 @property (nonatomic,assign) NSInteger tickets;
@@ -20,8 +20,20 @@
 
 @implementation ViewController
 
+- (void)btnClicked:(UIButton *)sender
+{
+    AViewController *avc = [[AViewController alloc]init];
+    [self.navigationController pushViewController:avc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self registerNotification];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(90, 100, 80, 30);
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 
     //多线程
 
@@ -236,4 +248,25 @@
     NSLog(@"NSInvocationOperation操作2===========%@",[NSThread currentThread]);
 }
 
+
+- (void)sendNotification
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"postN" object:nil];
+    });
+}
+
+- (void)registerNotification
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(testNotify) name:@"postN" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserverForName:@"postN" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"我收到了通知----%@ ",[NSThread currentThread]);
+    }];
+    [self sendNotification];
+}
+
+- (void)testNotify
+{
+    NSLog(@"我收到了通知----%@",[NSThread currentThread]);
+}
 @end

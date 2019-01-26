@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55239E9121FB3C4C0022011B /* NSTimer+Weak.m in Sources */ = {isa = PBXBuildFile; fileRef = 55239E9021FB3C4C0022011B /* NSTimer+Weak.m */; };
+		55239E9421FB49260022011B /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55239E9321FB49260022011B /* AViewController.m */; };
 		5549226421DCE5BD00F24281 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549226321DCE5BD00F24281 /* AppDelegate.m */; };
 		5549226721DCE5BD00F24281 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549226621DCE5BD00F24281 /* ViewController.m */; };
 		5549226A21DCE5BD00F24281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5549226821DCE5BD00F24281 /* Main.storyboard */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55239E8F21FB3C4C0022011B /* NSTimer+Weak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Weak.h"; sourceTree = "<group>"; };
+		55239E9021FB3C4C0022011B /* NSTimer+Weak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Weak.m"; sourceTree = "<group>"; };
+		55239E9221FB49260022011B /* AViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = "<group>"; };
+		55239E9321FB49260022011B /* AViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
 		5549225F21DCE5BD00F24281 /* 多线程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "多线程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5549226221DCE5BD00F24281 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5549226321DCE5BD00F24281 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +91,10 @@
 				5549226321DCE5BD00F24281 /* AppDelegate.m */,
 				5549226521DCE5BD00F24281 /* ViewController.h */,
 				5549226621DCE5BD00F24281 /* ViewController.m */,
+				55239E9221FB49260022011B /* AViewController.h */,
+				55239E9321FB49260022011B /* AViewController.m */,
+				55239E8F21FB3C4C0022011B /* NSTimer+Weak.h */,
+				55239E9021FB3C4C0022011B /* NSTimer+Weak.m */,
 				5549226821DCE5BD00F24281 /* Main.storyboard */,
 				5549226B21DCE5BE00F24281 /* Assets.xcassets */,
 				5549226D21DCE5BE00F24281 /* LaunchScreen.storyboard */,
@@ -204,7 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5549226721DCE5BD00F24281 /* ViewController.m in Sources */,
+				55239E9421FB49260022011B /* AViewController.m in Sources */,
 				5549227221DCE5BE00F24281 /* main.m in Sources */,
+				55239E9121FB3C4C0022011B /* NSTimer+Weak.m in Sources */,
 				5549226421DCE5BD00F24281 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
